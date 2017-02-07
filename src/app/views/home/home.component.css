@@ -1,0 +1,122 @@
+#homeContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+#mainContentContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+#sideNavContainer {
+  background: #d8d8d8;
+  padding: 16px;
+  width: 10%;
+  max-width: 35px;
+  -webkit-box-shadow: 3px 3px 6px rgba(0,0,0,0.24);
+  -moz-box-shadow: 3px 3px 6px rgba(0,0,0,0.24);
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.24);
+}
+
+#header {
+  color: #ffffff;
+}
+
+#headerContainer {
+  z-index: 1;
+  background: #00aced;
+  min-height: 60px;
+  -webkit-box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  -moz-box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+#bodyContentContainer {
+  width: 100%;
+  background: rgba(0,0,0,0.05);
+  overflow: scroll;
+  padding: .5em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#searchBarContainer > md-input-container {
+  font-size: .75rem;
+  width: 100%;
+  color: #00aced;
+}
+
+#searchBarContainer {
+  display: flex;
+  height: 55px;
+  width: 100%;
+}
+
+#sideNav {
+  width: 100%;
+  height: 100%;
+}
+
+.entityContainer {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30%;
+  min-height: 325px;
+  display: flex;
+  max-width: 265px;
+  min-width: 265px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#entityBodyContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#entityHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 125px;
+  width: 100%;
+  margin: 0;
+}
+
+.entityProfilePic {
+  width: 100px;
+  height: 100px;
+}
+
+.entityProfilePic > img {
+  width: 100%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  border-radius: 10%;
+}
+
+.twitterAvatar {
+  width: 150px;
+  margin: 12px 0;
+  background-image: url('../../../assets/img/twitter-logo.png');
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.animateLogoInfinite {
+  stroke-dasharray: 1260 1262;
+  stroke-dashoffset: 1261;
+  fill: transparent;
+  animation: drawLogo 6000ms linear 0ms forwards infinite;
+}

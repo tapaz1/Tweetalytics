@@ -1,0 +1,5 @@
+<div class="bodyChildViewContainer" *ngIf="searchedEntityArrayKeys.length > 0">
+  <div *ngFor="let entity of searchedEntityArrayKeys">
+    <twitter-entity-card [entity]="searchedEntityArray[entity]" [removeTwitterEntity]="removeEntityFromArray"></twitter-entity-card>
+  </div>
+</div>

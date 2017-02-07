@@ -1,0 +1,45 @@
+
+.removeCardButton {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  min-width: 40px;
+  padding: 0;
+  color: #ffffff;
+  background: #00aced;
+}
+
+.closeIcon {
+  font-size: 14px;
+  height: 18px;
+  width: 18px;
+  line-height: 18px;
+  font-weight: bolder;
+}
+
+.followerProfilePic {
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  border-radius: 10%;
+}
+
+.followerHeaderContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.followerBodyMedia {
+  width: auto;
+  height: auto;
+  max-height: 50%;
+  max-width: 50%;
+}
+
+.entityTitle {
+  text-align: center;
+}
+
+.entityDescription {
+  color: #66757f;
+}

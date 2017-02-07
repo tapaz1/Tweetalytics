@@ -1,1 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+
+body {
+  background-color: #eeeeee
+}
+
+md-card {
+  margin: 4px;
+  background: #ffffff;
+}
+
+md-hint {
+  color: #aaaaaa;
+}
+
+.primaryButton {
+  background: #00aced;
+  color: #ffffff !important;
+}
+
+.dashboardMainLogo {
+  -webkit-transform: scale(.125);
+  -moz-transform: scale(.125);
+  -ms-transform: scale(.125);
+  -o-transform: scale(.125);
+  transform: scale(.125);
+  position: relative;
+  top: 5px;
+  left: -130px;
+}
+
+.animateLogo {
+  stroke-dasharray: 1260 1262;
+  stroke-dashoffset: 1261;
+  fill: transparent;
+  animation: drawLogo 6000ms linear 0ms forwards;
+}
+
+.animateLoginLogo {
+  stroke-dasharray: 1260 1262;
+  stroke-dashoffset: 1261;
+  fill: transparent;
+  animation: drawLoginLogo 6000ms linear 0ms forwards;
+}
+
+@keyframes drawLogo {
+  0% {
+    fill: transparent;
+  }
+
+  25% {
+    fill: transparent;
+  }
+
+  50% {
+    fill: transparent;
+  }
+
+  75% {
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #ffffff;
+    stroke: #ffffff;
+  }
+}
+
+@keyframes drawLoginLogo {
+  0% {
+    fill: transparent;
+  }
+
+  25% {
+    fill: transparent;
+  }
+
+  50% {
+    fill: transparent;
+  }
+
+  75% {
+    fill: transparent;
+    stroke: #00aced;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #00aced;
+    stroke: #ffffff;
+  }
+}
+
+.sideNavButton {
+  margin: 25px 0 !important;
+  min-width: 35px !important;
+  border-radius: 50% !important;
+  min-height: 35px !important;
+  background: transparent;
+  color: rgba(0,0,0,0.5)!important;
+  padding: 0 !important;
+}
+
+.bodyChildViewContainer {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+@media (max-width: 735px) {
+  #entityBodyContainer {
+    flex-wrap: wrap;
+  }
+
+  .entityContainer {
+    max-width: none !important;
+    justify-content: flex-end !important;
+  }
+}

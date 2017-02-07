@@ -1,0 +1,37 @@
+<div id="entityBodyContainer">
+  <md-card class="entityContainer" [ngStyle]="{'background-image': 'url(' + entity.backgroundImage + ')'}">
+    <button class="removeCardButton" md-button (click)="removeTwitterEntity(entity)"><md-icon class="closeIcon">close</md-icon></button>
+    <div id="entityHeaderContainer">
+      <div class="entityProfilePic">
+        <img src="{{entity.profileImage}}"/>
+      </div>
+    </div>
+    <md-card-content>
+      <h3 class="entityTitle">{{entity.name}}</h3>
+      <span class="entityDescription">{{entity.description}}</span>
+    </md-card-content>
+    <md-card-actions>
+      <button class="primaryButton" md-raised-button>LIKE</button>
+      <button class="primaryButton" md-raised-button>SHARE</button>
+    </md-card-actions>
+  </md-card>
+  <div style="display: flex; flex-direction: column; max-height: 375px; height: 30%; overflow: scroll;">
+    <md-card *ngFor="let tweet of entity.tweets">
+      <md-card-content>
+        <div class="followerHeaderContainer">
+          <div>
+            <img class="followerProfilePic" src="{{tweet.user.profile_image_url_https}}" />
+            <h4>{{tweet.user.name}}</h4>
+            <span>{{tweet.created_at | date:'shortTime'}}</span>
+          </div>
+          <div>
+            <p>{{tweet.text}}</p>
+            <div *ngFor="let media of tweet.entities.media">
+              <img class="followerBodyMedia" src="{{media.media_url_https}}"/>
+            </div>
+          </div>
+        </div>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>
