@@ -31,7 +31,7 @@ export class TwitterService {
     let headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
 
-    return this.http.post('http://localhost:3000/authorize', {headers: headers})
+    return this.http.post('http://tweetalytics.azurewebsites.net/authorize', {headers: headers})
       .map((res) => {
       this.setBearerToken(res.json().data);
     });
@@ -42,7 +42,7 @@ export class TwitterService {
     headers.append('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
     let finalQuery = 'query=' + query;
 
-    return this.http.post('http://localhost:3000/search', finalQuery, {headers: headers})
+    return this.http.post('http://tweetalytics.azurewebsites.net/search', finalQuery, {headers: headers})
   }
 
   public getBearerToken() {
