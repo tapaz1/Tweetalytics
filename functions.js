@@ -1,5 +1,5 @@
 var request = require('request');
-var config = require('../../../data/twitter_config.js');
+var config = require('./data/twitter_config.js');
 
 functions = {
   authorize: function(req, res) {
