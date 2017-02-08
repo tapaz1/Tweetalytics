@@ -15,9 +15,9 @@
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(httpCors());
 
-  app.post('/authorize', functions.authorize);
-  app.post('/search', functions.search);
-  
+  app.post('/api/authorize', functions.authorize);
+  app.post('/api/search', functions.search);
+
   app.use('/', api.router);
   //
   app.get('/', function (req, res) {
@@ -31,6 +31,8 @@
   app.get('*.css', function (req, res) {
     res.sendFile(path.join(__dirname, '../../../dist' + req.url));
   });
+
+  app.get('/api/test', functions.test);
 
   const port = process.env.PORT || '3000';
   app.set('port', port);

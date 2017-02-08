@@ -61,6 +61,10 @@ functions = {
         })
       }
     });
+  },
+  test: function(req, res) {
+    console.log('Testing this api at /api/test');
+    res.json({success: true})
   }
 };
 
