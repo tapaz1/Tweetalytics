@@ -20,11 +20,23 @@
 
   // app.use(express.static(path.join(__dirname, '../../../dist')));
 
-  app.use('/api', api.router);
+  app.use('/', api.router);
   //
-  // app.get('*', function (req, res) {
-  //   res.sendFile(path.join(__dirname, '../../../dist/index.html'));
-  // });
+  app.get('/', function (req, res) {
+    console.log(path.join(__dirname, '../../../dist/index.html'));
+    res.sendFile(path.join(__dirname, '../../../dist/index.html'));
+  });
+
+  app.get('/*.js', function (req, res) {
+    console.log('Requesting js files..');
+    console.log(req);
+    res.sendFile(path.join(__dirname, '../../../dist' + req.url));
+  });
+
+  app.get('*.css', function (req, res) {
+    console.log('Requesting css files..');
+    res.sendFile(path.join(__dirname, '../../../dist' + req.url));
+  });
 
   const port = process.env.PORT || '3000';
   app.set('port', port);
