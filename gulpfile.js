@@ -8,7 +8,7 @@ gulp.task('default', function() {
 gulp.task('copy', function () {
   console.log("Running gulp task 'copyServer'.");
   gulp.src('src/app/server/**/*.js')
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('./'));
 
   gulp.src('data/**')
     .pipe(gulp.dest('dist'));
