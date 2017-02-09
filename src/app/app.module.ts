@@ -1,3 +1,5 @@
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -11,7 +13,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './views/login/login.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 import { HomeComponent } from './views/home/home.component'
-import { CustExtBrowserXhr } from './custom-browser-xhr';
 import { TwitterService } from './services/twitterSearch.service';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { SearchComponent } from './views/search/search.component';
@@ -37,7 +38,10 @@ import { TwitterEntityContainerComponent } from './components/twitter-entity-con
     RouterModule.forRoot(ROUTES),
   ],
   providers: [
-    TwitterService
+    TwitterService,
+    {
+      provide: LocationStrategy, useClass: HashLocationStrategy
+    }
   ],
   bootstrap: [AppComponent]
 })
