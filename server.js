@@ -18,7 +18,9 @@
   app.post('/api/authorize', functions.authorize);
   app.post('/api/search', functions.search);
 
-  app.use('/api', api.router);
+  app.use('/api', function(req, res) {
+    res.json('API is working!!')
+  });
   //
   app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
