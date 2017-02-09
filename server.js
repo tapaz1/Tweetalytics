@@ -18,21 +18,19 @@
   app.post('/api/authorize', functions.authorize);
   app.post('/api/search', functions.search);
 
-  app.use('/', api.router);
+  app.use('/api', api.router);
   //
   app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, '../../../dist/index.html'));
+    res.sendFile(path.join(__dirname, 'dist/index.html'));
   });
 
   app.get('/*.js', function (req, res) {
-    res.sendFile(path.join(__dirname, '../../../dist' + req.url));
+    res.sendFile(path.join(__dirname, 'dist/' + req.url));
   });
 
   app.get('*.css', function (req, res) {
-    res.sendFile(path.join(__dirname, '../../../dist' + req.url));
+    res.sendFile(path.join(__dirname, 'dist/' + req.url));
   });
-
-  app.get('/api/test', functions.test);
 
   const port = process.env.PORT || '3000';
   app.set('port', port);

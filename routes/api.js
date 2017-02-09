@@ -10,12 +10,16 @@
 
   const router = express.Router();
 
-  router.get('/api', function (req, res) {
+  router.get('/test', function (req, res) {
+    res.send('This is a test API call');
+  });
+
+  router.get('/', function (req, res) {
     res.send('API Works!!');
     //TODO: DO SOME STUFF ONCE LOADED..
   });
 
-  router.get('/api/getSearch', function (req, res) {
+  router.get('/getSearch', function (req, res) {
     res.send(config);
   });
 
