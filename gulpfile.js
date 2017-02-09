@@ -2,9 +2,6 @@ var gulp = require('gulp');
 
 gulp.task('default', function() {
   console.log('Running gulp tasks..');
-  console.log(process.env.PORT);
-  console.log(process.env.HTTP_HOST);
-  console.log(process);
 });
 
 gulp.task('copy', function () {
