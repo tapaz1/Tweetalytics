@@ -35,9 +35,6 @@
   const port = process.env.PORT || '3000';
   app.set('port', port);
 
-  console.log(port);
-  console.log(process.env);
-
   const server = http.createServer(app);
 
   server.listen(port, function () {
