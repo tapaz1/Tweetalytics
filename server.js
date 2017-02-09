@@ -34,7 +34,7 @@
     res.sendFile(path.join(__dirname, 'dist/' + req.url));
   });
 
-  const port = process.env.PORT || '443' || 80;
+  const port = process.env.PORT || '80';
   app.set('port', port);
 
   const server = http.createServer(app);
