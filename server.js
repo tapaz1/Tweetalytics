@@ -18,9 +18,7 @@
   app.post('/api/authorize', functions.authorize);
   app.post('/api/search', functions.search);
 
-  app.use('/api', function(req, res) {
-    res.json('API is working!!')
-  });
+  app.use('/api', api.router);
   //
   app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
@@ -37,9 +35,7 @@
   const port = process.env.PORT || '80';
   app.set('port', port);
 
-  const server = http.createServer(app);
-
-  server.listen(port, function () {
+  app.listen(port, function () {
     console.log('API running on localhost:' + port);
   });
 })();
