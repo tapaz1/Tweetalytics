@@ -14,12 +14,11 @@
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(httpCors());
+  app.use('/api', api.router);
 
   app.post('/api/authorize', functions.authorize);
   app.post('/api/search', functions.search);
 
-  app.use('/api', api.router);
-  //
   app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
   });
@@ -32,7 +31,11 @@
     res.sendFile(path.join(__dirname, 'dist/' + req.url));
   });
 
-  const port = process.env.PORT || '80';
+  app.get('/api', function (req, res) {
+    res.json('API is working!!!!')
+  });
+
+  const port = process.env.PORT || '443';
   app.set('port', port);
 
   app.listen(port, function () {
