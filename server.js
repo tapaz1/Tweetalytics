@@ -5,7 +5,7 @@
   const path = require('path');
   const http = require('http');
   const bodyParser = require('body-parser');
-  const api = require('./routes/api');
+  var api = require('./routes/api');
   const httpCors = require('cors');
   var functions = require('./functions');
 
