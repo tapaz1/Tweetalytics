@@ -14,7 +14,7 @@
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(httpCors());
-  app.use('/api', api.router);
+  app.use('/api', api);
 
   app.post('google.com/api/authorize', functions.authorize);
   app.post('google.com/api/search', functions.search);
