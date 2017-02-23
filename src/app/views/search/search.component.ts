@@ -19,6 +19,9 @@ export class SearchComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     console.log('search page instantiated..');
+    console.log(process);
+    console.log(process.env);
+    console.log(process.env.PORT);
     this.getSearchedEntityArrayKeys();
 
     // this.twitter.getSearchedEntity() ? this.searchedEntity = this.twitter.getSearchedEntity() : 'undefined';
