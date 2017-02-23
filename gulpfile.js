@@ -3,6 +3,8 @@ var exec = require('child_process').exec;
 
 gulp.task('default', function() {
   console.log('Running gulp tasks..');
+  console.log(SERVER_NAME);
+  console.log(SERVER_PORT);
 });
 
 gulp.task('copy', function () {
