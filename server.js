@@ -35,7 +35,7 @@
     res.json('API is working!!!!')
   });
 
-  const port = process.env.PORT || 80 || 443;
+  const port = process.env.PORT || 443;
   app.set('port', port);
 
   app.listen(port, function () {
