@@ -2,6 +2,7 @@ var gulp = require('gulp');
 
 gulp.task('default', function() {
   console.log('Running gulp tasks..');
+  console.log(port);
 });
 
 gulp.task('copy', function () {
