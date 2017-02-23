@@ -31,7 +31,7 @@ export class TwitterService {
     let headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
 
-    return this.http.post('google.com/api/authorize', {headers: headers})
+    return this.http.post('/api/authorize', {headers: headers})
       .map((res) => {
       this.setBearerToken(res.json().data);
     });

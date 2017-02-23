@@ -14,10 +14,10 @@
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(httpCors());
-  app.use('/api', api);
+  app.use('/api', api.router);
 
-  app.post('google.com/api/authorize', functions.authorize);
-  app.post('google.com/api/search', functions.search);
+  app.post('/api/authorize', functions.authorize);
+  app.post('/api/search', functions.search);
 
   app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
