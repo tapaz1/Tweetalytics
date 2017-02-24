@@ -3,7 +3,7 @@
 (function () {
   const express = require('express');
   var request = require('request');
-  var config = require('../data/twitter_config.js');
+  var config = require('data/twitter_config.js');
   const fs = require('fs');
   // const mongoose = require('mongoose');
 

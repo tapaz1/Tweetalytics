@@ -5,7 +5,7 @@
   const path = require('path');
   const http = require('http');
   const bodyParser = require('body-parser');
-  var api = require('/routes/api');
+  var api = require('./api');
   const httpCors = require('cors');
   var functions = require('./functions');
 
@@ -32,10 +32,12 @@
   });
 
   app.get('/api', function (req, res) {
+    console.log(api);
+    console.log(functions);
     res.json('API is working!!!!')
   });
 
-  const port = process.env.PORT || 443;
+  const port = process.env.PORT || 4200;
   app.set('port', port);
 
   app.listen(port, function () {
