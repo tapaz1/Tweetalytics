@@ -8,7 +8,6 @@
   var api = require('./api');
   const httpCors = require('cors');
   var functions = require('./functions');
-
   const app = express();
 
   app.use(bodyParser.json());
